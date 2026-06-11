@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FamilyMark Launch Slides</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#2A2A2A;font-family:'Noto Sans HK',sans-serif;padding:40px 20px;display:flex;flex-direction:column;align-items:center;gap:32px}
+.hint{color:#888;font-size:13px;text-align:center;margin-bottom:8px}
+.slide{width:1080px;height:1440px;position:relative;overflow:hidden;flex-shrink:0}
+/* ── Slide 1 Cover ── */
+.s1{background:#0C2A1A;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px}
+.s1 .badge{background:rgba(201,148,58,.2);color:#C9943A;font-size:22px;padding:10px 28px;border-radius:40px;letter-spacing:3px;margin-bottom:60px;border:.5px solid rgba(201,148,58,.3)}
+.s1 .line1{font-size:56px;font-weight:900;color:#F0EBE0;line-height:1.2}
+.s1 .divider{width:60px;height:1.5px;background:rgba(201,148,58,.4);margin:40px auto}
+.s1 .brand{font-size:72px;font-weight:900;color:#F0EBE0;letter-spacing:2px}
+.s1 .hk{color:#C9943A;font-size:36px;font-weight:400;margin-left:6px}
+.s1 .sub{font-size:22px;color:rgba(240,235,224,.5);letter-spacing:4px;margin-top:12px;margin-bottom:50px}
+.s1 .cta{font-size:24px;color:#C9943A;letter-spacing:2px}
+.wm{position:absolute;bottom:40px;width:100%;text-align:center;font-size:20px;color:rgba(240,235,224,.2);letter-spacing:2px}
+.wm-dark{color:#A8A09A}
+.slide-num{position:absolute;top:36px;right:44px;font-size:20px;color:rgba(240,235,224,.2);letter-spacing:2px}
+.slide-num-dark{color:#C8C0B8}
+/* ── Slides 2-6 ── */
+.s-light{background:#F8F6F1;padding:80px 80px 60px}
+.label{font-size:20px;color:#A8A09A;letter-spacing:3px;text-transform:uppercase;margin-bottom:32px}
+.s-title{font-size:52px;font-weight:900;color:#1A1814;line-height:1.2;margin-bottom:50px}
+/* Pain items */
+.pain{display:flex;gap:28px;align-items:flex-start;padding:32px 0;border-bottom:.5px solid #E4DED4}
+.pain:last-child{border:none}
+.pain-ico{font-size:52px;flex-shrink:0;margin-top:4px}
+.pain-title{font-size:30px;font-weight:800;color:#1A1814;margin-bottom:8px}
+.pain-desc{font-size:24px;color:#5A5248;line-height:1.6}
+/* App mock */
+.mock-hdr{background:#0C2A1A;border-radius:20px;padding:24px 30px;margin-bottom:24px}
+.mock-hdr-t{font-size:32px;font-weight:900;color:#F0EBE0}
+.mock-hdr-s{font-size:18px;color:#C9943A;letter-spacing:2px;margin-top:4px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.stat{background:#FFF;border-radius:16px;border:.5px solid #E4DED4;padding:18px 12px;text-align:center}
+.stat-n{font-size:40px;font-weight:900;line-height:1}
+.stat-l{font-size:16px;color:#A8A09A;margin-top:4px}
+.n-blu{color:#1A4A8A}.n-org{color:#C06020}.n-red{color:#C03030}.n-gld{color:#B07B20}
+.icard{background:#FFF;border-radius:16px;border:.5px solid #E4DED4;padding:22px 24px;display:flex;align-items:center;gap:18px;margin-bottom:12px}
+.lbar{width:5px;border-radius:3px;align-self:stretch;flex-shrink:0}
+.iico{font-size:40px;flex-shrink:0}
+.iname{font-size:26px;font-weight:700;color:#1A1814}
+.imeta{font-size:18px;color:#A8A09A;margin-top:4px}
+.iqty{font-size:22px;font-weight:700;color:#5A5248;text-align:right}
+.eb{font-size:18px;font-weight:600;padding:5px 12px;border-radius:8px;text-align:right;margin-top:5px;white-space:nowrap}
+.e-ok{background:rgba(42,106,48,.1);color:#2A6A30}
+.e-sn{background:rgba(176,123,32,.12);color:#B07B20}
+.e-ug{background:rgba(192,96,32,.1);color:#C06020}
+.e-ex{background:rgba(192,48,48,.1);color:#C03030}
+/* Shopping */
+.restock-box{background:rgba(176,123,32,.08);border:1px solid rgba(176,123,32,.25);border-radius:18px;padding:28px 30px;margin-bottom:28px}
+.restock-title{font-size:22px;font-weight:700;color:#B07B20;margin-bottom:18px}
+.restock-row{display:flex;align-items:center;padding:14px 0;border-bottom:.5px solid rgba(176,123,32,.15)}
+.restock-row:last-child{border:none}
+.restock-name{font-size:24px;color:#5A5248;flex:1}
+.radd{background:#B07B20;color:#FFF;border-radius:10px;padding:6px 18px;font-size:18px;font-weight:700}
+.shop-item{background:#FFF;border-radius:14px;border:.5px solid #E4DED4;padding:20px 24px;display:flex;align-items:center;gap:18px;margin-bottom:10px}
+.cb{width:32px;height:32px;border-radius:50%;border:2px solid #E4DED4;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.cb.done{background:#2A6A30;border-color:#2A6A30;color:#FFF;font-size:16px}
+.sn{font-size:24px;flex:1}
+.sn.done{text-decoration:line-through;color:#A8A09A}
+/* Tips */
+.tip-card{background:#FFF;border-radius:16px;border:.5px solid #E4DED4;padding:24px 28px;margin-bottom:16px}
+.tf{font-size:26px;font-weight:800;color:#1A1814;margin-bottom:8px}
+.ts{font-size:22px;color:#5A5248;margin-bottom:6px}
+.th{font-size:22px;color:#B07B20}
+/* Steps */
+.step{display:flex;gap:24px;align-items:flex-start;margin-bottom:32px}
+.snum{background:#0C2A1A;color:#C9943A;border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:900;flex-shrink:0;margin-top:4px}
+.stitle{font-size:28px;font-weight:700;color:#1A1814;margin-bottom:6px}
+.ssub{font-size:22px;color:#A8A09A}
+.url-box{background:#0C2A1A;border-radius:18px;padding:28px 36px;margin-top:24px;text-align:center}
+.url-label{font-size:18px;color:rgba(201,148,58,.6);letter-spacing:2px;margin-bottom:8px}
+.url-text{font-size:24px;color:#C9943A;letter-spacing:.5px;line-height:1.5}
+/* Slide 7 CTA */
+.s7{background:#0C2A1A;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px}
+.s7-main{font-size:68px;font-weight:900;color:#F0EBE0;line-height:1.1;margin-bottom:20px}
+.s7-sub{font-size:26px;color:rgba(240,235,224,.6);line-height:1.6;margin-bottom:50px}
+.url-pill{background:rgba(201,148,58,.12);border:.5px solid rgba(201,148,58,.4);border-radius:40px;padding:18px 40px;margin-bottom:50px;display:inline-block}
+.url-pill span{font-size:22px;color:#C9943A;letter-spacing:.5px}
+.feats{display:flex;flex-direction:column;gap:16px;width:100%;margin-bottom:50px}
+.feat{display:flex;align-items:center;gap:16px;text-align:left}
+.fdot{width:8px;height:8px;border-radius:50%;background:#C9943A;flex-shrink:0}
+.ftext{font-size:26px;color:rgba(240,235,224,.75)}
+.follow{font-size:24px;color:#C9943A;letter-spacing:1px}
+</style>
+</head>
+<body>
+<p class="hint">每張 Slide 截圖儲存即可上傳小紅書 ／ IG（建議逐張截圖）</p>
+
+<!-- SLIDE 1 -->
+<div class="slide s1">
+  <div class="slide-num">1 / 7</div>
+  <div class="badge">BETA · WEB VERSION</div>
+  <div class="line1">整咗幾個月</div>
+  <div class="line1">終於可以試用了</div>
+  <div class="divider"></div>
+  <div class="brand">FAMILY MARK<span class="hk">hk</span></div>
+  <div class="sub">香港家庭存貨管理</div>
+  <div class="cta">免費試用 · 即刻可以用</div>
+  <div class="wm">@familymark.hk</div>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide s-light">
+  <div class="slide-num slide-num-dark">2 / 7</div>
+  <div class="label">你有冇試過</div>
+  <div class="s-title">呢三個香港家庭<br>最常見的問題</div>
+  <div class="pain">
+    <div class="pain-ico">🗑️</div>
+    <div><div class="pain-title">食物過期都唔知</div><div class="pain-desc">買完放落雪櫃就忘記，發現時已經壞咗</div></div>
+  </div>
+  <div class="pain">
+    <div class="pain-ico">🛒</div>
+    <div><div class="pain-title">去超市唔知買咩</div><div class="pain-desc">唔記得家裏有咩，重複買又或者買少咗</div></div>
+  </div>
+  <div class="pain">
+    <div class="pain-ico">💸</div>
+    <div><div class="pain-title">唔知每月浪費幾多</div><div class="pain-desc">香港人平均每月丟棄 HK$400+ 食物</div></div>
+  </div>
+  <div class="wm wm-dark">@familymark.hk</div>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide s-light">
+  <div class="slide-num slide-num-dark">3 / 7</div>
+  <div class="label">功能 01</div>
+  <div class="s-title">存貨管理<br>+ 到期追蹤</div>
+  <div class="mock-hdr">
+    <div class="mock-hdr-t">存貨管理</div>
+    <div class="mock-hdr-s">FAMILYMARK.HK · BETA</div>
+  </div>
+  <div class="stats">
+    <div class="stat"><div class="stat-n n-blu">12</div><div class="stat-l">總存貨</div></div>
+    <div class="stat"><div class="stat-n n-org">2</div><div class="stat-l">需補貨</div></div>
+    <div class="stat"><div class="stat-n n-red">0</div><div class="stat-l">已過期</div></div>
+    <div class="stat"><div class="stat-n n-gld">3</div><div class="stat-l">快到期</div></div>
+  </div>
+  <div class="icard">
+    <div class="lbar" style="background:#2A6A30"></div>
+    <div class="iico">🥛</div>
+    <div style="flex:1"><div class="iname">鮮牛奶</div><div class="imeta">飲料 · 雪櫃</div></div>
+    <div><div class="iqty">2 盒</div><div class="eb e-ok">14日後</div></div>
+  </div>
+  <div class="icard">
+    <div class="lbar" style="background:#B07B20"></div>
+    <div class="iico">🥚</div>
+    <div style="flex:1"><div class="iname">雞蛋</div><div class="imeta">糧食 · 雪櫃</div></div>
+    <div><div class="iqty">6 隻</div><div class="eb e-sn">5日後</div></div>
+  </div>
+  <div class="icard">
+    <div class="lbar" style="background:#C03030"></div>
+    <div class="iico">🍞</div>
+    <div style="flex:1"><div class="iname">麵包</div><div class="imeta">糧食 · 廚房</div></div>
+    <div><div class="iqty">1 條</div><div class="eb e-ex">今日到期</div></div>
+  </div>
+  <div class="wm wm-dark">@familymark.hk</div>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide s-light">
+  <div class="slide-num slide-num-dark">4 / 7</div>
+  <div class="label">功能 02</div>
+  <div class="s-title">智能購物清單<br>自動補貨提示</div>
+  <div class="restock-box">
+    <div class="restock-title">⚠️ 需補貨 — 自動偵測</div>
+    <div class="restock-row"><span class="restock-name">鮮牛奶（剩 1 盒）</span><span class="radd">+ 加入</span></div>
+    <div class="restock-row"><span class="restock-name">雞蛋（剩 2 隻）</span><span class="radd">+ 加入</span></div>
+  </div>
+  <div style="font-size:20px;font-weight:700;color:#A8A09A;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px">購物清單</div>
+  <div class="shop-item"><div class="cb done">✓</div><div class="sn done">白米</div></div>
+  <div class="shop-item"><div class="cb done">✓</div><div class="sn done">食油</div></div>
+  <div class="shop-item"><div class="cb"></div><div class="sn">蠔油</div></div>
+  <div class="shop-item"><div class="cb"></div><div class="sn">鮮牛奶</div></div>
+  <div class="wm wm-dark">@familymark.hk</div>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide s-light">
+  <div class="slide-num slide-num-dark">5 / 7</div>
+  <div class="label">功能 03</div>
+  <div class="s-title">20種常見食物<br>保存期速查</div>
+  <div class="tip-card"><div class="tf">🥛 鮮牛奶</div><div class="ts">保存期：開封後 7 日</div><div class="th">💡 放最凍位置，唔係門格</div></div>
+  <div class="tip-card"><div class="tf">🥚 雞蛋</div><div class="ts">保存期：未開封 3–5 週</div><div class="th">💡 放內格，尖端向下</div></div>
+  <div class="tip-card"><div class="tf">🥬 蔬菜</div><div class="ts">保存期：3–7 日</div><div class="th">💡 廚房紙吸乾水份先入雪</div></div>
+  <div class="tip-card"><div class="tf">🍞 麵包</div><div class="ts">保存期：室溫 2–3 日</div><div class="th">💡 香港潮濕，建議急凍保存</div></div>
+  <div class="wm wm-dark">@familymark.hk</div>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide s-light">
+  <div class="slide-num slide-num-dark">6 / 7</div>
+  <div class="label">加至主畫面</div>
+  <div class="s-title">用法同 App 一樣<br>唔需要下載</div>
+  <div class="step"><div class="snum">1</div><div><div class="stitle">用 Safari 開啟連結</div><div class="ssub">必須係 Safari 先支援加主畫面</div></div></div>
+  <div class="step"><div class="snum">2</div><div><div class="stitle">底部 ⎙ 分享 → 加入主畫面</div><div class="ssub">Add to Home Screen</div></div></div>
+  <div class="step"><div class="snum">3</div><div><div class="stitle">主畫面出現圖示</div><div class="ssub">全螢幕打開，像原生 App 一樣</div></div></div>
+  <div class="url-box">
+    <div class="url-label">免費試用連結</div>
+    <div class="url-text">familymarkapp.github.io/<br>Familymark.hk.web/</div>
+  </div>
+  <div class="wm wm-dark">@familymark.hk</div>
+</div>
+
+<!-- SLIDE 7 -->
+<div class="slide s7">
+  <div class="slide-num">7 / 7</div>
+  <div class="s7-main">立即免費試用</div>
+  <div class="s7-sub">正式 iOS App 緊接推出<br>依家 Web 版可以即刻用</div>
+  <div class="url-pill"><span>familymarkapp.github.io/Familymark.hk.web/</span></div>
+  <div class="feats">
+    <div class="feat"><div class="fdot"></div><div class="ftext">📦 存貨管理 + 到期追蹤</div></div>
+    <div class="feat"><div class="fdot"></div><div class="ftext">🛒 智能購物清單</div></div>
+    <div class="feat"><div class="fdot"></div><div class="ftext">💡 20種食物保存期速查</div></div>
+    <div class="feat"><div class="fdot"></div><div class="ftext">♻️ 浪費金額追蹤</div></div>
+    <div class="feat"><div class="fdot"></div><div class="ftext">📱 加至主畫面免費使用</div></div>
+  </div>
+  <div class="follow">Follow @familymark.hk 留意正式 App 推出</div>
+  <div class="wm">@familymark.hk</div>
+</div>
+
+</body>
+</html>
